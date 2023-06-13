@@ -1,7 +1,5 @@
 import { combineReducers } from 'redux';
 
-const rootReducer = combineReducers({
+export default combineReducers({
   auth: (state, action) => 'testing',
 });
-
-export default rootReducer;
