@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
-import { useState } from 'react';
+import { React, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
