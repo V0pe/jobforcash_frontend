@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/jsx-props-no-spreading */
 import { React, useState } from 'react';
+import './components.css';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
@@ -17,42 +18,45 @@ const Login = ({ loggedIn }) => {
   const onFormSubmit = (data) => dispatch(loginUser(data)).catch(() => setError('Invalid credentials. Try again'));
 
   return (
-    <main className="">
-      <div className="">
+    <main className="effect">
+      <div className="overlay">
         <div className="">
-          <h2 className="">LOG IN</h2>
+          <h3 className="text-white text-center">LOGIN INTO YOUR ACCOUNT</h3>
+          <hr className="tiny-line" />
         </div>
         {error && <p className="">{error}</p>}
         {errors.username && <p className="">Username is required</p>}
         {errors.email && <p className="">Email is required</p>}
         {errors.password && <p className="">Password is required</p>}
         <form className="" onSubmit={handleSubmit(onFormSubmit)}>
-          <div className="">
+          <div className="mb-3">
             <input
-              className=""
+              className="form-control"
               type="username"
               placeholder="Username"
               {...register('username', { required: 'Username is required' })}
             />
           </div>
-          <div className="">
+          <div className="mb-3">
             <input
-              className=""
+              className="form-control"
               type="email"
               placeholder="e-mail address"
               {...register('email', { required: 'email is required' })}
             />
           </div>
-          <div className="">
+          <div className="mb-3">
             <input
-              className=""
+              className="form-control"
               type="password"
               placeholder="Password"
               {...register('password', { required: 'Password is required' })}
             />
           </div>
-          <input className="" type="submit" value="Log In" />
-          <Link className="" to="/signup">Sign Up</Link>
+          <div className='d-flex justify-content-center'>
+          <input className="btn custom-lime rounded" type="submit" value="Log In" />
+          <Link className="btn btn-success rounded" to="/signup">Sign Up</Link>
+          </div>
         </form>
       </div>
     </main>
