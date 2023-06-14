@@ -1,8 +1,27 @@
+import React, { useEffect } from 'react';
+import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { loginUser, checkAuth } from './redux/actions/auth';
+
 function App() {
+  const dispatch = useDispatch();
+  const auth = useSelector((state) => state.auth);
+  const handleClick = () => {
+    dispatch(loginUser({ username: 'GlumpPunk09', email: 'glmpnk@gmail.com', password: 'glmpnk123' }));
+  };
+
+  useEffect(() => {
+    dispatch(checkAuth());
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <h1 className="btn btn-primary">Hello from App</h1>
-    </div>
+    <Router>
+      <div className="App">
+        { auth.loggedIn ? 'logged in' : 'not logged in'}
+        <button type="button" onClick={handleClick}>get data</button>
+      </div>
+    </Router>
   );
 }
 
