@@ -1,0 +1,20 @@
+.background {
+  background-image:
+    linear-gradient(rgba(89, 241, 86, 0.865), rgba(88, 232, 105, 0.93)),
+    url("../assets/journeyman-services.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.tiny-line {
+  background-color: white;
+  height: 3px;
+  border: none;
+  margin: 5px 0;
+}
+
+.custom-lime {
+  background-color: limegreen;
+  color: white;
+}
