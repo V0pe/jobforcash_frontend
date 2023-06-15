@@ -12,7 +12,6 @@ const Signup = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onFormSubmit = (data) => {
-    console.log(data);
     dispatch(signupUser(data)).catch(() => setError('Invalid credentials. Try again'));
     navigate('/');
   };

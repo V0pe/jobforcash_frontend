@@ -17,15 +17,15 @@ const Laborers = () => {
       <h2>Laborers</h2>
       {laborers.map((laborer) => (
         <Link key={laborer.id} id={laborer.id} to={`/laborers/${laborer.id}`}>
-        <div key={laborer.id + 1}>
-          <img className="" src={laborer.image_url} alt="laborer-img" style={{ height: '50' }} />
-          <p>{laborer.name}</p>
-          <p>{laborer.skill}</p>
-          <p>{laborer.country}</p>
-          <p>{laborer.city}</p>
-          <p>{laborer.dimensions}</p>
-          <p>{laborer.price}</p>
-        </div>
+          <div key={laborer.id + 1}>
+            <img className="" src={laborer.image_url} alt="laborer-img" style={{ height: '50' }} />
+            <p>{laborer.name}</p>
+            <p>{laborer.skill}</p>
+            <p>{laborer.country}</p>
+            <p>{laborer.city}</p>
+            <p>{laborer.dimensions}</p>
+            <p>{laborer.price}</p>
+          </div>
         </Link>
       ))}
       ;

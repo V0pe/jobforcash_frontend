@@ -1,24 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { addLaborer } from '../redux/actions/laborers';
+import axios from 'axios';
+import { getToken } from '../redux/actions/auth';
 
 const CreateLaborer = () => {
-  const { register, handleSubmit } = useForm();
-  const dispatch = useDispatch();
+  const { reset } = useForm();
   const navigate = useNavigate();
+  const [laborer, setLaborer] = useState({});
 
-  const onFormSubmit = async (data) => {
-    dispatch(addLaborer(data));
-    navigate('/');
+  const handleChange = (e) => {
+    e.preventDefault();
+    setLaborer({ ...laborer, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = new FormData();
+    const img = document.getElementById('image_url');
+
+    data.append('image', img.files[0]);
+    // data.append('journeyman_id', parseInt(id, 10));
+    data.append('name', laborer.name);
+    data.append('skill', laborer.skill);
+    data.append('description', laborer.description);
+    data.append('country', laborer.country);
+    data.append('city', laborer.city);
+    data.append('price', laborer.price);
+    console.log(data);
+    console.log(data.get('image_url'));
+
+    axios.post('http://localhost:3001/v1/laborers', data, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        Authorization: getToken(),
+      },
+    })
+      .then((response) => {
+        console.log(response);
+        navigate('/');
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    reset();
   };
 
   return (
     <main className="">
       <div className="my-5 d-flex flex-column align-items-center">
         <h2>Add a Laborer to Listing</h2>
-        <form className="my-5 d-flex flex-row justify-content-center border border-dark" onSubmit={handleSubmit(onFormSubmit)}>
+        <form className="my-5 d-flex flex-row justify-content-center border border-dark" onSubmit={handleSubmit}>
           <div className="my-5 mx-5">
             <div className="d-flex flex-row justify-content-between my-3">
               <label
@@ -29,9 +61,12 @@ const CreateLaborer = () => {
               </label>
               <input
                 className=""
-                id="Laborer-name"
+                id="laborer-name"
                 type="text"
-                {...register('name', { required: 'Laborer name is required' })}
+                name="name"
+                placeholder="Journeyman name"
+                onChange={handleChange}
+                required
               />
             </div>
             <div className="d-flex flex-row justify-content-between my-3">
@@ -43,9 +78,12 @@ const CreateLaborer = () => {
               </label>
               <input
                 className=""
-                id="Laborer-skill"
+                id="laborer-skill"
                 type="text"
-                {...register('skill', { required: 'Skill is required' })}
+                name="skill"
+                placeholder="Journeyman skill"
+                onChange={handleChange}
+                required
               />
             </div>
             <div className="d-flex flex-row justify-content-between my-3">
@@ -57,9 +95,12 @@ const CreateLaborer = () => {
               </label>
               <input
                 className=""
-                id="Laborer-descrption"
+                id="laborer-description"
                 type="text"
-                {...register('descrpition', { required: 'Description is required' })}
+                name="description"
+                placeholder="Description of skill value"
+                onChange={handleChange}
+                required
               />
             </div>
             <div className="d-flex flex-row justify-content-between my-3">
@@ -71,9 +112,12 @@ const CreateLaborer = () => {
               </label>
               <input
                 className=""
-                id="Laborer-country"
+                id="laborer-country"
                 type="text"
-                {...register('country', { required: 'Country is required' })}
+                name="country"
+                placeholder="Country where labor is required"
+                onChange={handleChange}
+                required
               />
             </div>
             <div className="d-flex flex-row justify-content-between my-3">
@@ -85,9 +129,12 @@ const CreateLaborer = () => {
               </label>
               <input
                 className=""
-                id="Laborer-city"
+                id="laborer-city"
                 type="text"
-                {...register('city', { required: 'City is required' })}
+                name="city"
+                placeholder="City where labor is required"
+                onChange={handleChange}
+                required
               />
             </div>
             <div className="d-flex flex-row justify-content-between my-3">
@@ -100,8 +147,11 @@ const CreateLaborer = () => {
               <input
                 className=""
                 id="Laborer-price"
-                type="text"
-                {...register('price', { required: 'Price is required' })}
+                type="number"
+                name="price"
+                placeholder="Enter price per day"
+                onChange={handleChange}
+                required
               />
             </div>
             <div className="d-flex flex-column justify-content-between">
@@ -113,13 +163,15 @@ const CreateLaborer = () => {
               </label>
               <input
                 className="btn btn-dark"
-                id="Laborer-image"
+                id="image_url"
                 type="file"
-                {...register('image', { required: 'Image is required' })}
+                name="image_url"
+                placeholder="Select Image"
+                required
               />
             </div>
             <div className="my-3">
-              <button className="btn btn-primary btn-lg" type="submit" >
+              <button className="btn btn-primary btn-lg" type="submit">
                 Add Laborer
               </button>
             </div>
