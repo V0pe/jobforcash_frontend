@@ -1,4 +1,4 @@
-import { FETCH_LABORERS } from '../actions/.';
+import { FETCH_LABORERS } from '../actions';
 
 const initialState = [];
 

@@ -53,9 +53,9 @@ const Login = ({ loggedIn }) => {
               {...register('password', { required: 'Password is required' })}
             />
           </div>
-          <div className='d-flex justify-content-center'>
-          <input className="btn custom-lime rounded" type="submit" value="Log In" />
-          <Link className="btn btn-success rounded" to="/signup">Sign Up</Link>
+          <div className="d-flex justify-content-center">
+            <input className="btn custom-lime rounded" type="submit" value="Log In" />
+            <Link className="btn btn-success rounded" to="/signup">Sign Up</Link>
           </div>
         </form>
       </div>
