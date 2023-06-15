@@ -21,7 +21,7 @@ const Login = ({ loggedIn }) => {
     <main className="background d-flex flex-row justify-content-center align-items-center">
       <div className="">
         <div className="">
-          <h3 className="text-white text-center">LOGIN INTO YOUR ACCOUNT</h3>
+          <h3 className="text-white text-center">LOGIN TO YOUR ACCOUNT</h3>
           <hr className="tiny-line" />
         </div>
         {error && <p className="">{error}</p>}
