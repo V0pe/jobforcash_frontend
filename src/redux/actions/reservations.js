@@ -11,7 +11,6 @@ export const displayReservations = () => async (dispatch) => {
   });
   if (response.ok) {
     const data = await response.json();
-    console.log(data)
     const reservations = data.map((reservation) => reservation.attributes);
     dispatch({ type: FETCH_RESERVATIONS, payload: reservations });
   } else {

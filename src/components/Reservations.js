@@ -20,6 +20,7 @@ const Reservations = () => {
             // eslint-disable-next-line react/no-array-index-key
             key={id}
             id={reservation.id}
+            laborerId={reservation.laborer_id}
             startDate={reservation.start_date}
             daysNumber={reservation.number_days}
             cost={reservation.cost}
