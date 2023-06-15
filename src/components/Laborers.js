@@ -16,6 +16,7 @@ const Laborers = () => {
     <div className="">
       <h2>Laborers</h2>
       {laborers.map((laborer) => (
+        <Link key={laborer.id} id={laborer.id} to={`/laborers/${laborer.id}`}>
         <div key={laborer.id + 1}>
           <img className="" src={laborer.image_url} alt="laborer-img" style={{ height: '50' }} />
           <p>{laborer.name}</p>
@@ -25,6 +26,7 @@ const Laborers = () => {
           <p>{laborer.dimensions}</p>
           <p>{laborer.price}</p>
         </div>
+        </Link>
       ))}
       ;
     </div>

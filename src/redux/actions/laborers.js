@@ -11,7 +11,6 @@ export const displayLaborers = () => async (dispatch) => {
   });
   if (response.ok) {
     const data = await response.json();
-    console.log(data);
     const laborers = data.map((laborer) => laborer.attributes);
     dispatch({ type: FETCH_LABORERS, payload: laborers });
   } else {
