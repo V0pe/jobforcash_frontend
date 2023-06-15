@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { displayReservations } from '../redux/actions/reservations';
+import Reservation from './Reservation';
 
 const Reservations = () => {
   const dispatch = useDispatch();
@@ -12,19 +13,21 @@ const Reservations = () => {
   const reservations = useSelector((state) => state.reservations);
 
   return (
-    <div className="">
-      <h2>Reservations</h2>
-      {reservations.map((reservation) => (
-        <div key={reservation.id + 1}>
-          <p>{reservation.user_id}</p>
-          <p>{reservation.laborer_id}</p>
-          <p>{reservation.start_date}</p>
-          <p>{reservation.number_days}</p>
-          <p>{reservation.cost}</p>
-        </div>
-      ))}
-      ;
-    </div>
+    <main className="">
+      <div className="">
+        {reservations.map((reservation, id) => (
+          <Reservation
+            // eslint-disable-next-line react/no-array-index-key
+            key={id}
+            id={reservation.id}
+            startDate={reservation.start_date}
+            daysNumber={reservation.number_days}
+            cost={reservation.cost}
+          />
+        ))}
+        ;
+      </div>
+    </main>
   );
 };
 
