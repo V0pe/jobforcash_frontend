@@ -21,6 +21,11 @@
 
 /* Sidebar */
 
+.active {
+    background-color: limegreen;
+    color: white;
+}
+
 .outlet {
   height: 100%;
   width: 80%;
@@ -33,6 +38,7 @@
   height: 100%;
   width: 20%;
   border-right: 1px black solid;
+  background-color: #fff;
 }
 
 .iconH-C {
@@ -60,6 +66,9 @@ li a {
   color: black;
   text-decoration: none;
   padding: 1em;
+}
+.divH-C {
+    display: none;
 }
 
 @media only screen and (max-width: 800px) {

@@ -46,7 +46,7 @@ function Sidebar() {
           </div>
           <ul className="my-5">
             {navLinks.map(({ id, path, name }) => (
-              <li key={id}>
+              <li key={id} className="rounded-4">
                 <NavLink to={path} onClick={() => setIsOpen(false)}>{name}</NavLink>
               </li>
             ))}
