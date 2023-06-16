@@ -1,42 +1,123 @@
+.background {
+  background-image:
+    linear-gradient(rgba(89, 241, 86, 0.865), rgba(88, 232, 105, 0.93)),
+    url("../assets/journeyman-services.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.tiny-line {
+  background-color: white;
+  height: 3px;
+  border: none;
+  margin: 5px 0;
+}
+
 .custom-lime {
-    background-color: limegreen;
-    color:white
+  background-color: limegreen;
+  color: white;
+}
+
+/* Sidebar */
+
+.active {
+  background-color: limegreen;
+  color: white;
+}
+
+.outlet {
+  height: 100%;
+  width: 80%;
+  margin-left: 20%;
+}
+
+.sidebar {
+  top: 0;
+  position: fixed;
+  height: 100%;
+  width: 20%;
+  border-right: 1px black solid;
+  background-color: #fff;
+}
+
+.iconH-C {
+  width: 40px;
+  position: sticky;
+}
+
+.logo {
+  width: 60%;
+}
+
+.nav {
+  position: relative;
+  top: 60%;
+  transform: translateY(-70%);
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 1em;
+}
+
+.divH-C {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .divH-C {
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
   }
 
-  .effect {
-    background-image: url("../assets/journeyman-services.jpeg");
-    background-repeat: round;
-    height: 100vh;
-  }
-
-  .top {
-    padding:10rem;
-  }
-  
-  .tiny-line {
-    background-color: white;
-    height: 3px;
+  .buttonH-C {
     border: none;
-    margin: 5px 0;
+    background: #fff;
   }
 
-  .overlay {
+  .sidebar {
+    display: none;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+
+  .open {
+    display: block;
+  }
+
+  .logo {
+    width: 20%;
+    margin-bottom: 50px;
+  }
+
+  .nav {
+    transform: none;
     position: absolute;
+    width: 100%;
+    height: 100vh;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: limegreen;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    padding: 20px;
   }
 
-  .opa-overlay {
-    opacity: 50%;
+  .nav ul {
+    padding-left: 0;
   }
-  
+
+  .nav ul li {
+    margin-bottom: 1rem;
+  }
+}
