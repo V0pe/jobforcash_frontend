@@ -1,6 +1,7 @@
 import { FETCH_LABORERS } from '.';
 import { getToken } from './auth';
 
+// eslint-disable-next-line import/prefer-default-export
 export const displayLaborers = () => async (dispatch) => {
   const response = await fetch('http://localhost:3001/v1/laborers', {
     method: 'GET',

@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { displayLaborers } from '../redux/actions/laborers';
@@ -13,7 +13,7 @@ const Laborers = () => {
   const laborers = useSelector((state) => state.laborers);
 
   return (
-    <div className="">
+    <div className="outlet">
       <h2>Laborers</h2>
       {laborers.map((laborer) => (
         <Link key={laborer.id} id={laborer.id} to={`/laborers/${laborer.id}`}>
