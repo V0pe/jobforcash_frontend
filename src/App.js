@@ -20,10 +20,10 @@ function App() {
           <Route path="/signup" element={<Signup />} />
         </Route>
         <Route element={<WithSidebar />}>
-        <Route element={<ProtectedRoutes isAllowed={loggedIn} authChecked={authChecked} redirectPath="/login" />}>
-          <Route path="/" element={<TestHomePage />} />
+          <Route element={<ProtectedRoutes isAllowed={loggedIn} authChecked={authChecked} redirectPath="/login" />}>
+            <Route path="/" element={<TestHomePage />} />
+          </Route>
         </Route>
-      </Route>
       </Routes>
     </Router>
   );

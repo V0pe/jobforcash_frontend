@@ -22,8 +22,8 @@
 /* Sidebar */
 
 .active {
-    background-color: limegreen;
-    color: white;
+  background-color: limegreen;
+  color: white;
 }
 
 .outlet {
@@ -67,8 +67,9 @@ li a {
   text-decoration: none;
   padding: 1em;
 }
+
 .divH-C {
-    display: none;
+  display: none;
 }
 
 @media only screen and (max-width: 800px) {
@@ -119,5 +120,4 @@ li a {
   .nav ul li {
     margin-bottom: 1rem;
   }
-
 }
