@@ -53,10 +53,7 @@ const CreateLaborer = () => {
         <form className="my-5 d-flex flex-row justify-content-center border border-dark" onSubmit={handleSubmit}>
           <div className="my-5 mx-5">
             <div className="d-flex flex-row justify-content-between my-3">
-              <label
-                className=""
-                htmlFor="Laborer-name"
-              >
+              <label className="" htmlFor="Laborer-name" >
                 Laborer Name:
               </label>
               <input

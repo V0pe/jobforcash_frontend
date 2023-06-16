@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams, Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { displayLaborers } from '../redux/actions/laborers';
 
 const Laborer = () => {
@@ -16,7 +15,6 @@ const Laborer = () => {
   const { id } = useParams();
 
   const filteredLaborers = laborers.filter((laborer) => laborer.id == id);
-
 
   return (
     <div className="">
