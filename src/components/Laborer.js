@@ -20,43 +20,47 @@ const Laborer = () => {
 
   return (
     <div className="">
-      <div className="d-flex flex-column align-items-center">
-        <div>
-          <h2 className="mt-5 mx-5">Laborer</h2>
-        </div>
+      <div className="d-flex mt-7 mx-5 flex-column align-items-center">
         {filteredLaborers.map((item) => (
-          <div className="card my-5 mx-3" key={item.id + 1}>
-            <div className="my-5 mx-5">
-              <img className="" src={item.image_url} width="200" height="200" alt="laborer-img" />
+          <div className="d-flex flex-column flex-lg-row flex-sm-column container my-5 mx-3" height="100vh" key={item.id + 1}>
+          {/* <div className='row'> */}
+          <div className="col my-5 mx-5">
+              <img className="rounded-5" src={item.image_url} width="600" height="400" alt="laborer-img" />
             </div>
-            <div className="my-3 mx-5">
-              <p className="text-secondary">
-                Name:
+            <div className="col d-flex flex-column justify-content-around align-items-lg-end my-3 mx-5">
+              <h3 className="text-secondary">
                 {' '}
                 {item.name}
-              </p>
+              </h3>
               <p className="text-secondary">
-                Skill:
                 {' '}
-                {item.skill}
+                {item.description}
               </p>
-              <p className="text-secondary">
-                Country:
-                {' '}
-                {item.country}
-              </p>
-              <p className="text-secondary">
-                City:
-                {' '}
-                {item.city}
-              </p>
-              <p className="text-secondary">
+
+              <table class="table table-striped table-hover">
+                <tbody>
+                <tr style={{right:'0px'}}>
+                  <th scope="row">Skill</th>
+                  <td>{item.skill}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Country</th>
+                  <td>{item.country}</td>
+                </tr>
+                <tr>
+                  <th scope="row">City</th>
+                  <td>{item.city}</td>
+                </tr>
+                </tbody>
+              </table>
+              <h2 className="text-secondary">
                 Price:
                 {' '}
                 $
                 {item.price}
-              </p>
+              </h2>
             </div>
+          {/* </div> */}
           </div>
         ))}
       </div>
