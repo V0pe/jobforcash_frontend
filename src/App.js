@@ -11,7 +11,6 @@ import CreateLaborer from './components/CreateLaborer';
 import WithSidebar from './components/WithSidebar';
 import WithoutSidebar from './components/withoutSidebar';
 
-
 function App() {
   const { authChecked, loggedIn } = useAuth();
 
