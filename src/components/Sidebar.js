@@ -16,7 +16,17 @@ function Sidebar() {
     {
       id: useId(),
       path: '/',
-      name: 'Test Home',
+      name: 'Laborers',
+    },
+    {
+      id: useId(),
+      path: '/reservations',
+      name: 'Reservations',
+    },
+    {
+      id: useId(),
+      path: '/createlaborer',
+      name: 'Add Laborer',
     },
   ];
 
@@ -47,7 +57,15 @@ function Sidebar() {
           <ul className="my-5">
             {navLinks.map(({ id, path, name }) => (
               <li key={id} className="rounded-4">
-                <NavLink to={path} onClick={() => setIsOpen(false)}>{name}</NavLink>
+                <NavLink
+                  to={path}
+                  onClick={() => setIsOpen(false)}
+                  style={({ isActive }) => ({
+                    backgroundColor: isActive ? '#97bf0f' : '#fff',
+                  })}
+                >
+                  {name}
+                </NavLink>
               </li>
             ))}
             <li className="my-4">

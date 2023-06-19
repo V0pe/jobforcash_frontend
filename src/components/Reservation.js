@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { getToken } from '../redux/actions/auth';
+import './components.css';
 
 function Reservation({
   id, laborerId, startDate, daysNumber, cost,
@@ -53,7 +54,7 @@ function Reservation({
   };
 
   return (
-    <main>
+    <main className="outlet">
       <div className="border border-dark rounded mx-5 my-5">
         <div className="d-flex flex-column align-items-center border border-light my-3 mx-3">
           <img className="my-2 mx-5" src={laborerImage} width="150" height="150" alt="laborer-img" />

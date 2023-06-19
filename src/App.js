@@ -29,7 +29,7 @@ function App() {
             <Route path="/" element={<Laborers />} />
             <Route path="/laborers/:id" element={<Laborer />} />
             <Route path="/reservations" element={<Reservations />} />
-            <Route path="/create-reservation" element={<CreateReservation />} />
+            <Route path="/create-reservation/:id" element={<CreateReservation />} />
           </Route>
         </Route>
       </Routes>

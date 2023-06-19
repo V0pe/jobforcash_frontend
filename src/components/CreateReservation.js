@@ -1,15 +1,40 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { getToken } from '../redux/actions/auth';
 
 const CreateReservation = () => {
   const { register, handleSubmit } = useForm();
+  const { id } = useParams();
   const navigate = useNavigate();
   const { currentUser } = useSelector((state) => state.auth);
+  const [laborerImage, setLaborerImage] = useState('');
+  const [laborerName, setLaborerName] = useState('');
+  const [laborerId, setLaborerId] = useState('');
+  const [laborerSkill, setLaborerSkill] = useState('');
+
+  useEffect(() => {
+    (async () => {
+      const response = await fetch(`http://localhost:3001/v1/laborers/${id}`, {
+        method: 'GET',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          Authorization: getToken(),
+        },
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setLaborerImage(data.image_url);
+        setLaborerName(data.name);
+        setLaborerId(data.id);
+        setLaborerSkill(data.skill);
+      }
+    })();
+  }, []);
 
   const onFormSubmit = async (data) => {
     const response = await fetch('http://localhost:3001/v1/reservations', {
@@ -26,15 +51,15 @@ const CreateReservation = () => {
       }),
     });
     if (response.ok) {
-      navigate('/');
+      navigate('/reservations');
     }
   };
 
   return (
     <main className="">
-      <div className="d-flex flex-column align-items-center my-5">
-        <h2 className="my-5">Book a Reservation</h2>
-        <form className="my-5 d-flex flex-row justify-content-center border border-dark" onSubmit={handleSubmit(onFormSubmit)}>
+      <div className="d-flex flex-column align-items-center my-2">
+        <h2 className="my-2">Book a Reservation</h2>
+        <form className="d-flex flex-row justify-content-center border border-dark" onSubmit={handleSubmit(onFormSubmit)}>
           <div className="my-5 mx-5">
             <div className="my-3">
               <label htmlFor="username">
@@ -43,11 +68,32 @@ const CreateReservation = () => {
               </label>
             </div>
             <div className="d-flex flex-row justify-content-between my-3">
+              <div className="d-flex flex-row justify-content-between border border-primary my-3">
+                <div className="py-3 px-3">
+                  <img className="" src={laborerImage} width="100" height="100" alt="laborer-img" />
+                </div>
+                <div className="d-flex flex-column py-3 px-3">
+                  <label htmlFor="username">
+                    Laborer name:
+                    <input className="form-control form-control-sm" type="" value={laborerName} disabled />
+                  </label>
+                  <label htmlFor="username">
+                    Laborer ID#:
+                    <input className="form-control form-control-sm" type="" value={laborerId} disabled />
+                  </label>
+                  <label htmlFor="username">
+                    Laborer skill:
+                    <input className="form-control form-control-sm" type="" value={laborerSkill} disabled />
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div className="d-flex flex-row justify-content-between my-3">
               <label
                 className="number"
                 htmlFor="laborer_id"
               >
-                Laborer ID#:
+                Confirm Laborer ID#:
               </label>
               <input
                 className=""

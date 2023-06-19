@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { displayLaborers } from '../redux/actions/laborers';
 
 const Laborer = () => {
@@ -56,6 +56,11 @@ const Laborer = () => {
                 $
                 {item.price}
               </h2>
+              <div className="d-flex justify-content-end my-3 mx-2">
+                <Link id={item.id} to={`/create-reservation/${item.id}`}>
+                  <button className="btn btn-primary py-2 px-5" type="button">Reserve</button>
+                </Link>
+              </div>
             </div>
           </div>
         ))}
