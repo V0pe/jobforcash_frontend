@@ -5,9 +5,13 @@ import ProtectedRoutes from './components/ProtectedRoutes';
 import useAuth from './hooks/useAuth';
 import Signup from './components/Signup';
 import Login from './components/Login';
-import LogoutProvisional from './components/LogoutProvisional';
+import Laborers from './components/Laborers';
+import Laborer from './components/Laborer';
+import CreateLaborer from './components/CreateLaborer';
 import Reservations from './components/Reservations';
 import CreateReservation from './components/CreateReservation';
+import WithSidebar from './components/WithSidebar';
+import WithoutSidebar from './components/withoutSidebar';
 
 function App() {
   const { authChecked, loggedIn } = useAuth();
@@ -15,12 +19,18 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<Login loggedIn={loggedIn} />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route element={<ProtectedRoutes isAllowed={loggedIn} authChecked={authChecked} redirectPath="/login" />}>
-          <Route path="/" element={<LogoutProvisional />} />
-          <Route path="/reservations" element={<Reservations />} />
-          <Route path="/create-reservation" element={<CreateReservation />} />
+        <Route element={<WithoutSidebar />}>
+          <Route path="/login" element={<Login loggedIn={loggedIn} />} />
+          <Route path="/signup" element={<Signup />} />
+        </Route>
+        <Route element={<WithSidebar />}>
+          <Route element={<ProtectedRoutes isAllowed={loggedIn} authChecked={authChecked} redirectPath="/login" />}>
+            <Route path="/createlaborer" element={<CreateLaborer />} />
+            <Route path="/" element={<Laborers />} />
+            <Route path="/laborers/:id" element={<Laborer />} />
+            <Route path="/reservations" element={<Reservations />} />
+            <Route path="/create-reservation" element={<CreateReservation />} />
+          </Route>
         </Route>
       </Routes>
     </Router>

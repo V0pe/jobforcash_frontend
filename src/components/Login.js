@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { Link, Navigate } from 'react-router-dom';
 import { loginUser } from '../redux/actions/auth';
+import './components.css';
 
 const Login = ({ loggedIn }) => {
   if (loggedIn) return <Navigate to="/" replace />;
@@ -17,42 +18,45 @@ const Login = ({ loggedIn }) => {
   const onFormSubmit = (data) => dispatch(loginUser(data)).catch(() => setError('Invalid credentials. Try again'));
 
   return (
-    <main className="">
+    <main className="background d-flex flex-row justify-content-center align-items-center">
       <div className="">
         <div className="">
-          <h2 className="">LOG IN</h2>
+          <h3 className="text-white text-center">LOGIN TO YOUR ACCOUNT</h3>
+          <hr className="tiny-line" />
         </div>
         {error && <p className="">{error}</p>}
         {errors.username && <p className="">Username is required</p>}
         {errors.email && <p className="">Email is required</p>}
         {errors.password && <p className="">Password is required</p>}
         <form className="" onSubmit={handleSubmit(onFormSubmit)}>
-          <div className="">
+          <div className="mb-3">
             <input
-              className=""
+              className="form-control"
               type="username"
               placeholder="Username"
               {...register('username', { required: 'Username is required' })}
             />
           </div>
-          <div className="">
+          <div className="mb-3">
             <input
-              className=""
+              className="form-control"
               type="email"
               placeholder="e-mail address"
               {...register('email', { required: 'email is required' })}
             />
           </div>
-          <div className="">
+          <div className="mb-3">
             <input
-              className=""
+              className="form-control"
               type="password"
               placeholder="Password"
               {...register('password', { required: 'Password is required' })}
             />
           </div>
-          <input className="" type="submit" value="Log In" />
-          <Link className="" to="/signup">Sign Up</Link>
+          <div className="d-flex justify-content-center">
+            <input className="btn custom-lime rounded my-3 mx-3" type="submit" value="Log In" />
+            <Link className="btn btn-success rounded my-3 mx-3" to="/signup">Sign Up</Link>
+          </div>
         </form>
       </div>
     </main>
