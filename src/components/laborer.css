@@ -1,0 +1,39 @@
+.carousel .slide {
+  min-width: 35% !important;
+}
+
+.carousel-root {
+  width: 80% !important;
+}
+
+@media only screen and (max-width: 800px) {
+  .carousel .slide {
+    min-width: 100% !important;
+  }
+
+  .outlet {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .carousel .slide img {
+    width: 75% !important;
+    height: 30vh !important;
+  }
+
+  .side-btn {
+    margin: 0 !important;
+  }
+
+  .laborer-img {
+    height: 60vw !important;
+    width: 75vw !important;
+  }
+
+  .laborer-container {
+    margin-top: 4rem !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
