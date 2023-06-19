@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { useForm } from 'react-hook-form';
@@ -26,8 +27,6 @@ const CreateReservation = () => {
     });
     if (response.ok) {
       navigate('/');
-    } else {
-      console.log(data);
     }
   };
 

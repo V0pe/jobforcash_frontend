@@ -30,7 +30,6 @@ function Reservation({
       });
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
         setLaborerImage(data.image_url);
         setLaborerName(data.name);
         setLaborerSkill(data.skill);
@@ -49,9 +48,7 @@ function Reservation({
     });
     navigate(0);
     if (response.ok) {
-      console.log('Reservation deleted');
-    } else {
-      console.log(response);
+      navigate(0);
     }
   };
 
