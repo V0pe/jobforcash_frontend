@@ -8,6 +8,8 @@ import Login from './components/Login';
 import Laborers from './components/Laborers';
 import Laborer from './components/Laborer';
 import CreateLaborer from './components/CreateLaborer';
+import Reservations from './components/Reservations';
+import CreateReservation from './components/CreateReservation';
 import WithSidebar from './components/WithSidebar';
 import WithoutSidebar from './components/withoutSidebar';
 
@@ -26,6 +28,8 @@ function App() {
             <Route path="/createlaborer" element={<CreateLaborer />} />
             <Route path="/" element={<Laborers />} />
             <Route path="/laborers/:id" element={<Laborer />} />
+            <Route path="/reservations" element={<Reservations />} />
+            <Route path="/create-reservation" element={<CreateReservation />} />
           </Route>
         </Route>
       </Routes>
