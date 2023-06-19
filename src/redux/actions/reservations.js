@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import { FETCH_RESERVATIONS } from '.';
 import { getToken } from './auth';
 
