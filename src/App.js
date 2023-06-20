@@ -8,6 +8,7 @@ import Login from './components/Login';
 import Laborers from './components/Laborers';
 import Laborer from './components/Laborer';
 import CreateLaborer from './components/CreateLaborer';
+import DeleteLaborers from './components/DeleteLaborers';
 import Reservations from './components/Reservations';
 import CreateReservation from './components/CreateReservation';
 import WithSidebar from './components/WithSidebar';
@@ -30,6 +31,7 @@ function App() {
             <Route path="/laborers/:id" element={<Laborer />} />
             <Route path="/reservations" element={<Reservations />} />
             <Route path="/create-reservation/:id" element={<CreateReservation />} />
+            <Route path="/delete-laborers" element={<DeleteLaborers />} />
           </Route>
         </Route>
       </Routes>

@@ -2,8 +2,8 @@
 
 <div align="center">
   <br/>
-
-  <h3><b>Job for Cash</b></h3>
+  
+  <img src="./src/assets/jfc-logo.png" alt="jobforcash-logo" width="60" height="60"/>
 
 </div>
 
@@ -33,18 +33,17 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [jobforcash] <a name="about-project"></a>
+# 📖 [Jobforcash] <a name="about-project"></a>
 
-**[jobforcash]** is A financial app that keeps track of daily transactions on different categories
+**[Jobforcash]** is a services application that keeps track of all nearby laborers for hire.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-- [ ] Postgres
-- [ ] Rails
-- [ ] Ruby
 - [ ] React
+- [ ] Redux
+
 <details>
   <summary>Client</summary>
   <ul>
@@ -70,18 +69,17 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Add categories]**
-- **[Add transaction]**
+- **[Hire Laborers]**
+- **[Reserve Laborers]**
+- **[Add Laborers]**
+- **[Delete Laborers]**
+- **[Delete Reservation]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://rails-hvyl.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,9 +89,8 @@
 
 To get a local copy up and running, follow these steps.
 
-- [ ] Run `bundle i` to install the dependencies.
-- [ ] Run `npm i` to install npm dependencies.
-- [ ] Run `rails s` to run the application
+- [ ] Run `npm init` to install npm dependencies.
+- [ ] Run `npm start` to run the application
 
 ### Prerequisites
 
@@ -153,6 +150,8 @@ To run tests, run the following command:
 - Twitter: [@de_vope_](https://twitter.com/de_vope)
 - LinkedIn: [Victor Damola](https://linkedin.com/in/victor-damola-aderibigbe-27931ab0)
 
+👤 **German Cobian**
+
 - GitHub [@German Cobian](@German Cobian)
 - Twitter [@GermanCobian2](https://twitter.com/GermanCobian2)
 - LinkedIn [@German Cobian](https://www.linkedin.com/in/german-cobian/)
@@ -163,9 +162,9 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>.
 
-- [ ] **[express more features]**
-- [ ] **[Add transactions]**
-- [ ] **[View complex transactions]**
+- [ ] **[Create niche for the laborers]**
+- [ ] **[Create real time laborers features]**
+- [ ] **[Create laborer rating]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -28,6 +28,11 @@ function Sidebar() {
       path: '/createlaborer',
       name: 'Add Laborer',
     },
+    {
+      id: useId(),
+      path: '/delete-laborers',
+      name: 'Delete Laborer',
+    },
   ];
 
   const openMenu = (event) => {

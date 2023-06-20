@@ -52,7 +52,7 @@ const Laborers = () => {
           {laborers.map((laborer) => (
             <Link key={laborer.id} id={laborer.id} to={`/laborers/${laborer.id}`}>
               <div key={laborer.id + 1}>
-                <img className="image-fluid" src={laborer.image_url} alt="laborer-img" width="100" height="300" style={{ height: '50' }} />
+                <img className="image-fluid rounded-4" src={laborer.image_url} alt="laborer-img" width="100" height="300" style={{ height: '50' }} />
                 <p className="mt-4">{laborer.name}</p>
                 <p>{laborer.skill}</p>
                 <p>{laborer.price}</p>
@@ -65,7 +65,7 @@ const Laborers = () => {
           <button
             onClick={handleNext}
             style={{
-              background: 'limegreen', border: 'none', padding: '1rem', borderRadius: '1rem',
+              background: 'rgb(151, 191, 15)', border: 'none', padding: '1rem', borderRadius: '1rem',
             }}
           >
             <FontAwesomeIcon icon={faArrowRight} style={iconStyle} />

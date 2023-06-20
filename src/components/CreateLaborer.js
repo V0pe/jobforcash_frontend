@@ -167,7 +167,7 @@ const CreateLaborer = () => {
               />
             </div>
             <div className="my-3">
-              <button className="btn btn-primary btn-lg" type="submit">
+              <button className="btn custome-lime btn-lg" type="submit">
                 Add Laborer
               </button>
             </div>

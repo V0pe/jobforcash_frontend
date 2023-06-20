@@ -15,8 +15,12 @@
 }
 
 .custom-lime {
-  background-color: limegreen;
+  background-color: rgb(151, 191, 15);
   color: white;
+}
+
+.custom-lime:hover {
+  background-color: chartreuse;
 }
 
 /* Sidebar */

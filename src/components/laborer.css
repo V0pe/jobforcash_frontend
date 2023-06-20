@@ -36,4 +36,13 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+
+  .image-laborer-del {
+    height: 35vw !important;
+    width: 30vw !important;
+  }
+
+  .lab-del {
+    display: none;
+  }
 }
