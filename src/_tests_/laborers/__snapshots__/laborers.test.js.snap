@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="outlet text-center"
+  style={
+    Object {
+      "marginTop": "4rem",
+    }
+  }
+>
+  <h3>
+    LATEST LABORERS
+  </h3>
+  <p>
+    Please pick a laborer to use
+  </p>
+  <div
+    className="d-flex justify-space-between align-items-center"
+    style={
+      Object {
+        "marginTop": "2rem",
+      }
+    }
+  >
+    <div
+      className="mx-4 side-btn"
+    >
+      <button
+        onClick={[Function]}
+        style={
+          Object {
+            "background": "ash",
+            "border": "none",
+            "borderRadius": "1rem",
+            "padding": "1rem",
+          }
+        }
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-arrow-left "
+          data-icon="arrow-left"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      className="carousel-root"
+    >
+      <div
+        className="carousel carousel-slider"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <ul
+          className="control-dots"
+        >
+          <li
+            aria-label="slide item 1"
+            className="dot selected"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            tabIndex={0}
+            value={0}
+          />
+        </ul>
+        <button
+          aria-label="previous slide / item"
+          className="control-arrow control-prev control-disabled"
+          onClick={[Function]}
+          type="button"
+        />
+        <div
+          className="slider-wrapper axis-horizontal"
+          style={Object {}}
+        >
+          <ul
+            className="slider animated"
+            style={
+              Object {
+                "MozTransitionDuration": "350ms",
+                "OTransform": "translate3d(0,0,0)",
+                "OTransitionDuration": "350ms",
+                "WebkitTransform": "translate3d(0,0,0)",
+                "WebkitTransitionDuration": "350ms",
+                "msTransform": "translate3d(0,0,0)",
+                "msTransitionDuration": "350ms",
+                "transform": "translate3d(0,0,0)",
+                "transitionDuration": "350ms",
+              }
+            }
+          >
+            <li
+              className="slide selected previous"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              ;
+            </li>
+          </ul>
+        </div>
+        <button
+          aria-label="next slide / item"
+          className="control-arrow control-next control-disabled"
+          onClick={[Function]}
+          type="button"
+        />
+        <p
+          className="carousel-status"
+        >
+          1 of 1
+        </p>
+      </div>
+    </div>
+    <div
+      className="mx-4 side-btn"
+    >
+      <button
+        onClick={[Function]}
+        style={
+          Object {
+            "background": "limegreen",
+            "border": "none",
+            "borderRadius": "1rem",
+            "padding": "1rem",
+          }
+        }
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-arrow-right "
+          data-icon="arrow-right"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
