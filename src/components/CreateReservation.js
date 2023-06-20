@@ -137,7 +137,7 @@ const CreateReservation = () => {
               />
             </div>
             <div className="d-flex flex-row justify-content-between my-3">
-              <button className="btn btn-primary btn-sm" type="submit">
+              <button className="btn custom-lime btn-sm" type="submit">
                 Create Reservation
               </button>
               <Link className="mx-3" to="/">Your Reservations</Link>

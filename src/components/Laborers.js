@@ -51,11 +51,23 @@ const Laborers = () => {
         <Carousel showArrows={false} showThumbs={false} selectedItem={currentIndex}>
           {laborers.map((laborer) => (
             <Link key={laborer.id} id={laborer.id} to={`/laborers/${laborer.id}`}>
-              <div key={laborer.id + 1}>
+              <div key={laborer.id + 1} className="d-flex flex-column align-items-start">
                 <img className="image-fluid rounded-4" src={laborer.image_url} alt="laborer-img" width="100" height="300" style={{ height: '50' }} />
-                <p className="mt-4">{laborer.name}</p>
-                <p>{laborer.skill}</p>
-                <p>{laborer.price}</p>
+                <p className="mt-4">
+                  <b>Name:</b>
+                  {' '}
+                  {laborer.name}
+                </p>
+                <p>
+                  <b>Skill:</b>
+                  {' '}
+                  {laborer.skill}
+                </p>
+                <p>
+                  <b>Price:</b>
+                  {' '}
+                  {laborer.price}
+                </p>
               </div>
             </Link>
           ))}

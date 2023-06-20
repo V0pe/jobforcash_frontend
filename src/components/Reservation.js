@@ -49,7 +49,7 @@ function Reservation({
     });
     navigate(0);
     if (response.ok) {
-      navigate(0);
+      navigate('/reservations');
     }
   };
 

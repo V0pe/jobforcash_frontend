@@ -28,12 +28,32 @@ function DeleteLaborer({
       <div className="mx-2 mt-3">
         <img className="image-fluid image-laborer-del rounded" src={imageUrl} alt="laborer-img" width="200" height="200" style={{ height: '50' }} />
       </div>
-      <div>
-        <h4 className="mt-2">{name}</h4>
-        <p>{skill}</p>
-        <p className="lab-del">{description}</p>
-        <p className="lab-del">{city}</p>
-        <p>{price}</p>
+      <div className="d-flex flex-column align-items-start">
+        <h4 className="mt-2">
+          <b>Name:</b>
+          {' '}
+          {name}
+        </h4>
+        <p>
+          <b>Skill:</b>
+          {' '}
+          {skill}
+        </p>
+        <p className="lab-del">
+          <b>Description:</b>
+          {' '}
+          {description}
+        </p>
+        <p className="lab-del">
+          <b>City:</b>
+          {' '}
+          {city}
+        </p>
+        <p>
+          <b>Price:</b>
+          {' '}
+          {price}
+        </p>
       </div>
       <div>
         <button className="btn custom-lime my-3 mx-3" type="button" onClick={deleteLaborer}>

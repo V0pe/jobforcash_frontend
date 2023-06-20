@@ -58,7 +58,7 @@ const Laborer = () => {
               </h2>
               <div className="d-flex justify-content-end my-3 mx-2">
                 <Link id={item.id} to={`/create-reservation/${item.id}`}>
-                  <button className="btn btn-primary py-2 px-5" type="button">Reserve</button>
+                  <button className="btn custom-lime py-2 px-5" type="button">Reserve</button>
                 </Link>
               </div>
             </div>
