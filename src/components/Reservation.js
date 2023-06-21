@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { getToken } from '../redux/actions/auth';
 import './components.css';
 
-function Reservation({
+const Reservation = ({
   id, laborerId, startDate, daysNumber, cost,
-}) {
+}) => {
   const navigate = useNavigate();
 
   const [laborerImage, setLaborerImage] = useState('');
@@ -100,7 +100,7 @@ function Reservation({
       </div>
     </main>
   );
-}
+};
 
 Reservation.propTypes = {
   id: PropTypes.number.isRequired,

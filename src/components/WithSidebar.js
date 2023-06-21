@@ -2,13 +2,11 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 
-function WithSidebar() {
-  return (
-    <>
-      <Sidebar />
-      <Outlet />
-    </>
-  );
-}
+const WithSidebar = () => (
+  <>
+    <Sidebar />
+    <Outlet />
+  </>
+);
 
 export default WithSidebar;

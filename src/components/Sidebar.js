@@ -7,7 +7,7 @@ import MenuHamburger from '../assets/menu.svg';
 import CloseMenu from '../assets/close.svg';
 import './components.css';
 
-function Sidebar() {
+const Sidebar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
@@ -87,7 +87,7 @@ function Sidebar() {
       </aside>
     </>
   );
-}
+};
 
 export default Sidebar;
 

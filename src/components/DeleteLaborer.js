@@ -4,9 +4,9 @@ import './laborer.css';
 import { useNavigate } from 'react-router-dom';
 import { getToken } from '../redux/actions/auth';
 
-function DeleteLaborer({
+const DeleteLaborer = ({
   id, name, skill, price, imageUrl, city, description,
-}) {
+}) => {
   const navigate = useNavigate();
 
   async function deleteLaborer() {
@@ -62,7 +62,7 @@ function DeleteLaborer({
       </div>
     </div>
   );
-}
+};
 
 DeleteLaborer.propTypes = {
   id: PropTypes.number.isRequired,

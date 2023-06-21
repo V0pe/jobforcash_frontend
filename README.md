@@ -91,6 +91,8 @@ To get a local copy up and running, follow these steps.
 
 - [ ] Run `npm init` to install npm dependencies.
 - [ ] Run `npm start` to run the application
+###### Note
+It seems that the bundle error message you are referring to, tends to appear when the project is run on systems other than the ones we (the developers) used. Kindly please disregard the error and simply click on the X icon on the top right portion of the React app’s screen and proceed to use the app.
 
 ### Prerequisites
 
@@ -127,6 +129,8 @@ To run the project, execute the following command:
 ```sh
   npm run start
 ```
+ ##### Note:
+ It seems that the bundle error message you are referring to, tends to appear when the project is run on systems other than the ones we (the developers) used. Kindly please disregard the error and simply click on the X icon on the top right portion of the React app’s screen and proceed to use the app.
 
 ### Run tests
 

@@ -14,7 +14,7 @@ import CreateReservation from './components/CreateReservation';
 import WithSidebar from './components/WithSidebar';
 import WithoutSidebar from './components/withoutSidebar';
 
-function App() {
+const App = () => {
   const { authChecked, loggedIn } = useAuth();
 
   return (
@@ -37,6 +37,6 @@ function App() {
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
