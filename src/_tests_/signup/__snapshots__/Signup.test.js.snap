@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<main
+  className="background d-flex flex-row justify-content-center align-items-center"
+>
+  <div
+    className=""
+  >
+    <div
+      className=""
+    >
+      <h2
+        className="text-white text-center"
+      >
+        SIGN UP FOR AN ACCOUNT
+      </h2>
+      <hr
+        className="tiny-line"
+      />
+    </div>
+    <form
+      className=""
+      onSubmit={[Function]}
+    >
+      <div
+        className="mb-3"
+      >
+        <input
+          className="form-control"
+          name="username"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Username"
+          type="text"
+        />
+      </div>
+      <div
+        className="mb-3"
+      >
+        <input
+          className="form-control"
+          name="email"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Email"
+          type="email"
+        />
+      </div>
+      <div
+        className="mb-3"
+      >
+        <input
+          className="form-control"
+          name="password"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Password"
+          type="password"
+        />
+      </div>
+      <div
+        className="d-flex justify-content-center"
+      >
+        <input
+          className="btn custom-lime rounded my-3 mx-3"
+          type="submit"
+          value="Sign Up"
+        />
+        <a
+          className="btn btn-success rounded my-3 mx-3"
+          href="/login"
+          onClick={[Function]}
+        >
+          Log In
+        </a>
+      </div>
+    </form>
+  </div>
+</main>
+`;
