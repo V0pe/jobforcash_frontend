@@ -18,6 +18,24 @@ const App = () => {
   const { authChecked, loggedIn } = useAuth();
 
   return (
+    <React.Suspense
+        fallback={(
+          <Spinner
+            animation="grow"
+            variant="primary"
+            style={{
+              width: '4rem',
+              height: '4rem',
+              position: 'absolute',
+              top: '0',
+              bottom: '0',
+              right: '0',
+              left: '0',
+              margin: 'auto auto',
+            }}
+          />
+        )}
+    >
     <Router>
       <Routes>
         <Route element={<WithoutSidebar />}>
